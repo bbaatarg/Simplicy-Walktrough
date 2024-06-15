@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Simplecy Walkthrough&rdquo; Documentation by &ldquo;CoDesign&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Simplecy Walkthrough&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 12/28/2015<br>
+					By: CoDesign<br>
+					Email: <a href="mailto:codesign2015@gmail.com">codesign2015@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->	
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/CoDesign2015" target="_blank">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="number">
+			<li><a href="#setup">Setup on your project</a></li>
+			<div>1.1  <a href="#implement">Implement and import CDWalkthrough classes</a></div>
+			<div>1.2  <a href="#create_data">Create page data</a></div>
+			<div>1.3  <a href="#configuring">Initiliazing config</a></div>
+			<div>1.4  <a href="#create_walkthrough">Create Walkthrough with config</a></div>
+			<div>1.5  <a href="#show">Show walkthrough</a></div>
+			<li><a href="#customizing">Customizing Walkthrough</a></li>
+			<li><a href="#addphoneimages">Adding phone mockup images</a></li>
+			<li><a href="#supports">Supports</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h2 id="setup"><strong>1. Setup on your project</strong> - <a href="#toc">top</a></h2>
+		<p class = "declaring">Drag <library>CDWalkthrough</library> folder into your xCode project.</p>
+		<h4><strong>Steps</strong></h4>
+			<div>
+				<ol>
+				<li>
+			<div>
+				<p>In the project navigator, select <strong>CDWalkthrough</strong> folder</p>
+			</div></li><li class="step"><div class="action"><p>Choose File &gt; Add Files to “&lt;Project_Name&gt;”.
+		</p></div></li>
+		<li class="step"><div class="action"><p>Select the file or folder to add.</p></div></li>
+		<li class="step"><div class="action"><p>Select destination, folder, and target options, and click Add.</p>
+		</div></li></ol></div>
+		
+		<h3 id = "implement"><strong>1.1 Implement and import CDWalkthrough classes</strong></h3>
+        <p class = "langauge">Objective-C code</p>
+        <div class = "code"><br>
+            <p class = "declaring"><hash>#import</hash><library> "CDataObject.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "WalktroughConfig.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "WalktroughViewController.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "CoDesignHelper.h"</library></p><br>
+        </div>
+        
+        <div><br><p class = "declaring">In swift project you should add the code to <hash>[YourProjectName-Bridging-Header.h class]</hash></p>
+           <a href = "http://stackoverflow.com/questions/24002369/how-to-call-objective-c-code-from-swift">Here is add Objective-C class in swift project</a></div>
+
+        <p class = "langauge">swift code</p>
+        <div class = "code"><br>
+            <p class = "declaring"><hash>#import</hash><library> "CDataObject.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "WalktroughConfig.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "WalktroughViewController.h"</library></p>
+            <p class = "declaring"><hash>#import</hash><library> "CoDesignHelper.h"</library></p><br>
+        </div>
+        
+		<h3 id="create_data"><strong>1.2 Create page data</strong> - <a href="#toc">top</a></h3>
+        
+        <p class = "langauge">Objective-C code</p>
+        <div class = "code"><br><p class = "method">CDataObject* screen1=[[CDataObject alloc] initWithViewLayout:layout<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;imageName:@"screenshot-1"<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;title:@"Main messages"<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;detail:@"Lorem Ipsum is simply dummy text of the printing"];</p><br></div>
+
+        <p class = "langauge">swift code</p>
+        <div class = "code"><br><p class = "method"> let screen1 = CDataObject(viewLayout: CDataViewLayout.Up, imageName: "screenshot-1", title: "Main messages", detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry")</p><br></div>
+
+
+		<h3><Strong>CDataObject</Strong> can font-icon code for text-icon style for example:</h3>
+        
+        <p class = "langauge">Objective-C code</p>
+        
+        <div class = "code"><br><p class = "method">CDataObject* icon2=[[CDataObject alloc] initWithViewLayout:CDataViewLayoutMiddle<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;imageName:@"\ue723"<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;title:@"App features"<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;detail:@"Lorem Ipsum has been the industry's standard text ever"];</p><br></div>
+
+        <p class = "langauge">swift code</p>
+        <div class = "code"><br><p class = "method">let screen1 = CDataObject(viewLayout: CDataViewLayout.Up, imageName: "\u{e800}", title: "Main messages", detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry")</p><br></div>
+        
+
+		<h3 id = "configuring"><strong>1.3 Initiliazing config</strong></h3>
+        
+        <div><br><p class = "declaring"><library>WalkthroughConfig</library> class is defining Walkthrough Screen objects. It will initialize background styles.</p>
+        <p class = "declaring"> Initialize by flat style you can use <hash>setFlatStyleWithThemeColor</hash>:</p><br></div>
+        
+        <div class = "code"><br><p class = "method">- (instancetype)setFlatStyleWithThemeColor:(UIColor *)flatColor CDObjects:(NSArray *)CDObjects screenType:(CDScreenType)screenType;</p><br></div>
+        
+        <p class = "langauge">Objective-C code</p>
+        
+        <div class = "code"><br><p class = "method">WalktroughConfig* config = [[WalktroughConfig alloc] setFlatStyleWithThemeColor:[WalkthroughDefinitions flatBlueColor]<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CDObjects:textIcons<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; screenType:CDScreenTypeIcon];</p><br></div>
+        
+        <p class = "langauge">swift code</p>
+        <div class = "code"><br><p class = "method"> let config = WalktroughConfig().setFlatStyleWithThemeColor(WalkthroughDefinitions.flatBlueColor(), CDObjects: textIcons, screenType: CDScreenTypeIcon)</p><br></div>
+
+
+
+
+        <div><br><p class = "declaring">Initialize by pattern style you can use <hash>setPatternStyleWithThemeColor</hash>:</p><br></div>
+
+        <div class = "code"><br><p class = "method">- (instancetype)setPatternStyleWithThemeColor:(UIColor *)themeColor patternImage:(UIImage *)patternImage CDObjects:(NSArray *)CDObjects screenType:(CDScreenType)screenType;</p><br></div>
+
+        <p class = "langauge">Objective-C code</p>
+
+        <div class = "code"><br><p class = "method">WalktroughConfig* config = [[WalktroughConfig alloc]<br> setPatternStyleWithThemeColor:[WalkthroughDefinitions flatRedColor] <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;patternImage:[UIImage imageNamed:@"pattern"]<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; CDObjects:contentsArray<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;screenType:CDScreenTypeScreenshot];</p><br></div>
+
+        <p class = "langauge">swift code</p>
+        <div class = "code"><br><p class = "method">let config = WalktroughConfig().setPatternStyleWithThemeColor(WalkthroughDefinitions.flatRedColor(), patternImage: UIImage(named: "pattern"), CDObjects: contentsArray, screenType: CDScreenTypeScreenshot)</p><br></div>
+
+
+
+        <div><br><p class = "declaring">Initialize by photo style you can use <hash>setPhotoStyleWithThemeColor</hash>:</p><br></div>
+
+        <div class = "code"><br><p class = "method">- (instancetype)setPhotoStyleWithThemeColor:(UIColor*)themeColor photoImage:(UIImage *)photoImage CDObjects:(NSArray *)CDObjects screenType:(CDScreenType)screenType;</p><br></div>
+
+        <p class = "langauge">Objective-C code</p>
+
+        <div class = "code"><br><p class = "method">WalktroughConfig* config = [[WalktroughConfig alloc]<br> setPhotoStyleWithThemeColor:[WalkthroughDefinitions flatOrangeColor]<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;photoImage:[UIImage imageNamed:@"background"]<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   CDObjects:contentsArray<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;screenType:CDScreenTypePhone6PlusGold];</p><br></div>
+
+        <p class = "langauge">swift code</p>
+            <div class = "code"><br><p class = "method">let config = WalktroughConfig().setPhotoStyleWithThemeColor(WalkthroughDefinitions.flatOrangeColor(), photoImage: UIImage(named: "background"), CDObjects: contentsArray, screenType: CDScreenTypePhone6PlusGold)</p><br></div>
+
+		<h3 id = "create_walkthrough"><strong>1.4 Create Walkthrough with config</strong></h3>
+		<div><p class = "declaring"><br><br><library>WalkthroughViewController</library> must initialize with configuration</p></div>
+        <div class = "code"><br><p class = "method">WalktroughViewController* loginVC=[[WalktroughViewController alloc] initWithWalktroughConfig:config];</p><br></div></br>
+		
+
+
+		
+		<h3 id="show"><strong>1.5 Show walkthrough</strong> - <a href="#toc">top</a></h3>
+        
+		<div><br><p  class = "declaring">You created <library>WalkthroughViewController</library> with configuration so you can display it.</p></div>
+		<h4>So you can use:</h4>
+		
+		<div class = "code"><br><p class = "method">[self.navigationController pushViewController:(UIViewController*) animated:(boolean)];</p>
+        <p class = "method">[self presentViewController:(UIViewController *)\ animated:(BOOL) completion:^(void)completion];</p><br></div>
+		<hr>
+		
+		<h2 id = "customizing"><strong>2.0 Customizing Walkthrough</strong></h2>
+
+		<div><p class = "declaring">We created <library>WalkthroughDefinitions</library> class for customizing definition values and it has few methods to</p><p class = "declaring"> customize.</p></div>
+        
+        <div><p class = "function">+(UIColor*)themeColor;</p>
+        <p class = "comment">//text icon color and background color but it will given from configuration</p></div>
+        
+        <div><p class = "function">+(UIColor*)textColor;</p>
+            <p class = "comment">//title, detail label text color</p></div>
+        
+        <div><p class = "function">+(UIColor*)indicatorActiveColor;</p>
+            <p class = "comment">//indicator active color</p></div>
+        
+        <div><p class = "function">+(UIColor*)indicatorInactiveColor;</p>
+            <p class = "comment">//indicator inactive color</p></div>
+        
+        <div><p class = "function">+(UIFont*)titleLabelFont;</p>
+            <p class = "comment">//title label font</p></div>
+        
+        <div><p class = "function">+(UIFont*)detailLabelFont;</p>
+            <p class = "comment">/detail label font</p></div>
+        
+        <div><p class = "function">+(UIFont*)skipButtonTitleFont;</p>
+            <p class = "comment">//skip button font</p></div>
+        
+        <div><p class = "function">+(NSString*)skipButtonTitle;</p>
+            <p class = "comment">//can localized string from “skip” key</p></div>
+        
+        <div><p class = "function">+(CGFloat)skipButtonTitleWidth;</p>
+            <p class = "comment">//it generates skip button width from text string</p></div>
+        
+        <div><p class = "function">+(CGFloat)photoImageBlurRatio;</p>
+            <p class = "comment">//when you use photo background style the photo will be automatically blured this ratio</p></div>
+        
+        <div><p class = "function">+(CGFloat)photoImageDarkRatio;</p>
+            <p class = "comment">//when you use photo background style the photo will be automatically will be draked maximum is 1.0</p></div>
+    
+        
+		<h3 id="addphoneimages"><strong>3. Adding phone images</strong> - <a href="#toc">top</a></h3>
+		
+		<p class = "declaring">If you want to add your custom iphone image on <library>Walktrough Screen</library> you should do few things.</p>
+		
+        <ol class="number">
+            <li>Add phone mockup image to <strong>i​mages.xcassets</strong></li>
+            <li>open phoneSizes.plist file and insert new dictionary and give image name and screen frame</li>
+            <li><div><h5>Add phone to configuration:</h5>
+            <p class = "declaring">Open <library>WalkthroughConfig.h</library> and add your phone name type on <library>CDScreenType</library></p><p class = "declaring"> enum and give index</p></div></li>
+            <li><p>If above steps are not error it will be works correctly :)</p></li>
+        </ol>
+
+
+
+        <h3 id="supports"><strong>4. Supports</strong> - <a href="#toc">top</a></h3>
+
+        <ol class="number">
+            <li>System - iOS 7 or higher.</li>
+            <li>Only portrait orientation.</li>
+            <li>All iPads and iPhone 6, 6plus</li>
+            <li>Retina HD</li>
+            <li>Font - icon for text icon style</li>
+        </ol>
+
+        <div>We used ...</div>
+        <ul>
+        	<li>Entype font-icons from <a href="http://www.entypo.com" target="blank">www.entypo.com</a></li>
+			<li>iPhone 5S, 5C Mockups - <a href="https://dribbble.com/shots/1485388-Ultimate-iPhone-Collection?list=users&offset=11" target="blank">Nurutdinov Timur</a></li>
+			<li>iPhone 6, 6 Plus Mockups - <a href="http://www.sketchappsources.com/free-source/795-apple-iphone6-and-6-plus-sketch-freebie-resource.html" target="blank">Michael Stache</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this template! Please feel free to email us if you have any questions or just want to make some suggestions.</p> 
+		
+		<p class="append-bottom alt large"><strong>CoDesign © 2015</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
